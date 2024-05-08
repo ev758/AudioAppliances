@@ -1,0 +1,9 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  height: 630px;
+  border: 1px solid black;
+}

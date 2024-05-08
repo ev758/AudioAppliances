@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: white;
+}
+
+h1 {
+  font-size: 3.2em;
+  padding: 50px 0px 40px 0px;
+}
+
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.audio-product-links {
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  padding: 10px 0px;
+}
+
+.mb-3 {
+  padding: 90px 0px 50px 0px;
+}
