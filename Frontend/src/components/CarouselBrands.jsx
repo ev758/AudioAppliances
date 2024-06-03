@@ -1,14 +1,14 @@
 import { Carousel } from 'react-bootstrap';
-import Sony from '../assets/images/sony.jpg';
-import MasterDynamic from '../assets/images/master_dynamic.jpg';
-import HouseOfMarley from '../assets/images/house_of_marley.jpg';
-import Creative from '../assets/images/creative.jpg';
-import Soundcore from '../assets/images/soundcore.jpg';
-import AKG from '../assets/images/akg.jpg';
-import Beyerdynamic from '../assets/images/beyerdynamic.jpg';
-import JBL from '../assets/images/jbl.jpg';
-import JVC from '../assets/images/jvc.jpg';
-import Jabra from '../assets/images/jabra.jpg';
+import Sony from '../assets/images/brand_images/sony.jpg';
+import MasterDynamic from '../assets/images/brand_images/master_dynamic.jpg';
+import HouseOfMarley from '../assets/images/brand_images/house_of_marley.jpg';
+import Creative from '../assets/images/brand_images/creative.jpg';
+import Soundcore from '../assets/images/brand_images/soundcore.jpg';
+import AKG from '../assets/images/brand_images/akg.jpg';
+import Beyerdynamic from '../assets/images/brand_images/beyerdynamic.jpg';
+import JBL from '../assets/images/brand_images/jbl.jpg';
+import JVC from '../assets/images/brand_images/jvc.jpg';
+import Jabra from '../assets/images/brand_images/jabra.jpg';
 
 function CarouselBrands() {
   return (

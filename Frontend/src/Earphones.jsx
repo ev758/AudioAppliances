@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar.jsx";
 import SearchBar from "./components/SearchBar.jsx";
 
@@ -12,6 +11,8 @@ function Earphones() {
         <NavigationBar/>
 
         <SearchBar/>
+
+        <Outlet/>
       </div>
     </>
   )
