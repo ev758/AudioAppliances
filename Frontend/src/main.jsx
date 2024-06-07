@@ -8,8 +8,10 @@ import Earphones from "./Earphones.jsx";
 import Microphones from "./Microphones.jsx";
 import Speakers from "./Speakers.jsx";
 import SearchResults from "./SearchResults.jsx";
+import ProductFilterPage from "./ProductFilterPage.jsx";
 import ProductPage from './components/ProductPage.jsx';
 import ProductResults from "./components/ProductResults.jsx";
+import FilterResults from "./components/FilterResults.jsx";
 import './index.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 
@@ -46,6 +48,11 @@ const router = createBrowserRouter(
       <Route path="searchresults" element={<SearchResults/>}>
         <Route path=":keyword" element={<ProductResults productType={null}/>}/>
         <Route path=":keyword/:productName" element={<ProductPage/>}/>
+      </Route>
+
+      <Route path="filterresults" element={<ProductFilterPage/>}>
+        <Route path=":filter" element={<FilterResults/>}/>
+        <Route path=":filter/:productName" element={<ProductPage/>}/>
       </Route>
     </Route>
   )

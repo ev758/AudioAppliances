@@ -4,20 +4,17 @@ import Filter from './Filter.jsx';
 import GetProducts from './../utils/GetProducts.jsx';
 import ProductImage from './../utils/ProductImage.jsx';
 
-function ProductResults({productType}) {
+function FilterResults() {
   const [products, setProducts] = useState([]);
   const location = useLocation();
   const params = useParams();
   let djangoApiConnection;
 
-  if (productType !== null) {
-    djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + productType;
-  }
-  else if (location.state !== null) {
-    djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + location.state.keyword;
+  if (location.state !== null) {
+    djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + "filter/" + location.state.filters;
   }
   else {
-    djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + params.keyword;
+    djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + "filter/" + params.filter;
   }
 
   useEffect(() => {
@@ -47,4 +44,4 @@ function ProductResults({productType}) {
   )
 }
 
-export default ProductResults;
+export default FilterResults;

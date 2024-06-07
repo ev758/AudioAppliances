@@ -91,6 +91,20 @@ nav {
   margin: 50px 0px 60px 0px;
 }
 
+.filter {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.filter-text {
+  font-size: 30px;
+}
+
+.filter-apply {
+  text-align: right;
+  margin: 30px 10px 0px 0px;
+}
+
 .mb-3 {
   padding: 90px 0px 50px 0px;
 }
