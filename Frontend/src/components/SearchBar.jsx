@@ -12,13 +12,15 @@ function SearchBar() {
           placeholder="Enter an audio product"
           onKeyDown={(event) => {
             if (event.key === "Enter") {
-              const keyword = document.getElementById("searchbar").value;
+              let keyword = document.getElementById("searchbar").value;
+              keyword = keyword.trim().toLowerCase();
               navigate(`/searchresults/${keyword}`, { state: { keyword } });
             }
           }}
         />
         <Button variant="dark" onClick={() => {
-          const keyword = document.getElementById("searchbar").value;
+          let keyword = document.getElementById("searchbar").value;
+          keyword = keyword.trim().toLowerCase();
           navigate(`/searchresults/${keyword}`, { state: { keyword } });
         }}>
           Search

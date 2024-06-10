@@ -12,6 +12,7 @@ import ProductFilterPage from "./ProductFilterPage.jsx";
 import ProductPage from './components/ProductPage.jsx';
 import ProductResults from "./components/ProductResults.jsx";
 import FilterResults from "./components/FilterResults.jsx";
+import Error404 from "./Error404.jsx";
 import './index.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 
@@ -54,6 +55,8 @@ const router = createBrowserRouter(
         <Route path=":filter" element={<FilterResults/>}/>
         <Route path=":filter/:productName" element={<ProductPage/>}/>
       </Route>
+
+      <Route path="*" element={<Error404/>}/>
     </Route>
   )
 );

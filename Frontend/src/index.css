@@ -10,12 +10,12 @@
 }
 
 body {
-  background-color: white;
+  background-color: #F0F8FF;
 }
 
 h1 {
   font-size: 3.2em;
-  padding: 50px 0px 40px 0px;
+  padding: 40px 0px;
 }
 
 h1 a {
@@ -34,13 +34,13 @@ nav {
   font-weight: 500;
   color: black;
   text-decoration: none;
-  padding: 10px 0px;
+  margin: 10px 0px;
 }
 
 .audio-product-format {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .audio-product-card {
@@ -79,7 +79,7 @@ nav {
   height: 600px;
   border: 1px solid black;
   float: left;
-  margin: 30px 50px 30px 30px;
+  margin: 30px 30px 30px 30px;
 }
 
 .audio-product div {
@@ -106,5 +106,117 @@ nav {
 }
 
 .mb-3 {
-  padding: 90px 0px 50px 0px;
+  padding: 60px 0px 50px 0px;
+}
+
+.error-404 {
+  font-size: 100px;
+}
+
+.error-404-text {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  nav {
+    display: grid;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  .audio-product-card {
+    width: 300px;
+    margin: 30px 0px;
+  }
+
+  .audio-product {
+    overflow: unset;
+  }
+  
+  .audio-product-image {
+    width: 250px;
+    height: 250px;
+    float: none;
+    margin: 30px 0px;
+  }
+  
+  .audio-product div {
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .audio-product-description {
+    margin: 40px 0px;
+  }
+
+  .filter {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .audio-product {
+    overflow: unset;
+  }
+  
+  .audio-product-image {
+    width: 400px;
+    height: 400px;
+    float: none;
+    margin: 30px 0px;
+  }
+  
+  .audio-product div {
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .audio-product-description {
+    margin: 40px 0px;
+  }
+  
+  .filter {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .audio-product {
+    overflow: unset;
+  }
+  
+  .audio-product-image {
+    width: 500px;
+    height: 500px;
+    float: none;
+    margin: 30px 0px;
+  }
+  
+  .audio-product div {
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .audio-product-description {
+    margin: 40px 0px;
+  }
+  
+  .filter {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .audio-product div {
+    margin-top: 40px;
+  }
+  
+  .audio-product-description {
+    margin: 40px 0px 50px 0px;
+  }
+  
+  .filter {
+    margin-left: 10px;
+  }
 }
