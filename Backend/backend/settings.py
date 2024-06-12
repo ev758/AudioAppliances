@@ -85,12 +85,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mssql',
         'NAME': NAME,
         'USER': USER,
         'PASSWORD': PASSWORD,
         'HOST': HOST,
-        'PORT': PORT
+        'PORT': PORT,
+        'OPTIONS': {
+            'driver': 'ODBC Driver 18 for SQL Server'
+        }
     }
 }
 

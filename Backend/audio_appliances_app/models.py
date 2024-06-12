@@ -7,7 +7,7 @@ class Products(models.Model):
     product_description = models.TextField()
     product_type = models.CharField(max_length=20)
     product_link = models.TextField()
-    image_name = models.CharField(max_length=30)
+    image_name = models.CharField(max_length=50)
     image_path = models.TextField()
     keywords = models.TextField()
 
