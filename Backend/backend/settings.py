@@ -12,7 +12,7 @@ NAME = os.getenv("NAME")
 USER = os.getenv("USER")
 PASSWORD = os.getenv("PASSWORD")
 HOST = os.getenv("HOST")
-PORT = os.getenv("PORT")
+DB_PORT = os.getenv("DB_PORT")
 DJANGO_SERVER = os.getenv("DJANGO_SERVER")
 VITE = os.getenv("VITE")
 
