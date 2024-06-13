@@ -90,7 +90,7 @@ DATABASES = {
         'USER': USER,
         'PASSWORD': PASSWORD,
         'HOST': HOST,
-        'PORT': PORT,
+        'PORT': DB_PORT,
         'OPTIONS': {
             'driver': 'ODBC Driver 18 for SQL Server'
         }
