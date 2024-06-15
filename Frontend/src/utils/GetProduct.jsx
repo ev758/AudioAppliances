@@ -1,4 +1,4 @@
-async function GetProduct(djangoApiConnection, setProducts) {
+async function GetProduct(djangoApiConnection, setProduct) {
     try {
         const response = await fetch(djangoApiConnection);
 
@@ -7,7 +7,7 @@ async function GetProduct(djangoApiConnection, setProducts) {
         }
 
         const productData = await response.json();
-        setProducts(productData);
+        setProduct(productData);
     }
     catch (error) {
         console.log(error);

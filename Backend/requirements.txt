@@ -3,7 +3,7 @@ Django
 django-cors-headers
 djangorestframework
 gunicorn
-mssql-django
+mysql-connector-python
 pyodbc
 python-dotenv
 pytz

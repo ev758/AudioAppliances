@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import Filter from './Filter.jsx';
 import GetProducts from './../utils/GetProducts.jsx';
-import ProductImage from './../utils/ProductImage.jsx';
 
 function ProductResults({productType}) {
   const [products, setProducts] = useState([]);
@@ -34,7 +33,7 @@ function ProductResults({productType}) {
             <div className="audio-product-card" key={product.product_id}>
               <Link to={product.product_name}>
                 <div>
-                  <img src={ProductImage(product.image_name, product.image_path)} alt={product.product_name}/>
+                  <img src={product.image_path + product.image_name} alt={product.product_name}/>
                   <h5>{product.product_name}</h5>
                   <p>{product.brand}</p>
                 </div>

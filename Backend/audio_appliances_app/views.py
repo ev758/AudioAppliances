@@ -1,7 +1,11 @@
 from django.db.models import Q
+from django.http import HttpResponse
 from django.http.response import JsonResponse
 from audio_appliances_app.models import Products
 from audio_appliances_app.serializers import ProductSerializer
+
+def audio_appliances(request):
+    return HttpResponse("Audio Appliances")
 
 def get_products(request, keyword):
     if (request.method == 'GET'):
