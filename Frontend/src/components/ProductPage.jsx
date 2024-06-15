@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { ScrollRestoration, useParams } from 'react-router-dom';
 import GetProduct from './../utils/GetProduct.jsx';
-import ProductImage from './../utils/ProductImage.jsx';
 
 function ProductPage() {
   const [product, setProduct] = useState([]);
@@ -17,7 +16,7 @@ function ProductPage() {
     <>
       <ScrollRestoration/>
       <div className="audio-product" key={product.product_id}>
-        <img className="audio-product-image" src={ProductImage(product.image_name, product.image_path)} alt={product.product_name}/>
+        <img className="audio-product-image" src={product.image_path + product.image_name} alt={product.product_name}/>
         <div>
           <h3>{product.product_name}</h3>
           <p>{product.brand}</p>
