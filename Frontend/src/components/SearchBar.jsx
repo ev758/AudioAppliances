@@ -14,6 +14,8 @@ function SearchBar() {
             if (event.key === "Enter") {
               let keyword = document.getElementById("searchbar").value;
               keyword = keyword.trim().toLowerCase();
+
+              //goes to product results page with keyword input
               navigate(`/searchresults/${keyword}`, { state: { keyword } });
             }
           }}
@@ -21,6 +23,8 @@ function SearchBar() {
         <Button variant="dark" onClick={() => {
           let keyword = document.getElementById("searchbar").value;
           keyword = keyword.trim().toLowerCase();
+
+          //goes to product results page with keyword input
           navigate(`/searchresults/${keyword}`, { state: { keyword } });
         }}>
           Search

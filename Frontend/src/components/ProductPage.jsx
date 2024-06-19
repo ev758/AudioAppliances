@@ -4,6 +4,7 @@ import { ScrollRestoration, useParams } from 'react-router-dom';
 import GetProduct from './../utils/GetProduct.jsx';
 
 function ProductPage() {
+  //declarations
   const [product, setProduct] = useState([]);
   const params = useParams();
   const djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + "product/" + params.productName;
@@ -15,6 +16,7 @@ function ProductPage() {
   return (
     <>
       <ScrollRestoration/>
+      {/* displays product */}
       <div className="audio-product" key={product.product_id}>
         <img className="audio-product-image" src={product.image_path + product.image_name} alt={product.product_name}/>
         <div>

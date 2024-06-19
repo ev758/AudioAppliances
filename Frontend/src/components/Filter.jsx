@@ -3,6 +3,7 @@ import { Accordion, Button, Form, Offcanvas } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 
 function Filter() {
+    //declarations
     const [show, setShow] = useState(false);
     const close = () => setShow(false);
     const offcanvas = () => setShow(true);
@@ -310,6 +311,7 @@ function Filter() {
                 
                 <div className="filter-apply">
                     <Button variant="dark" onClick={() => {
+                        //declarations
                         const headphones = document.getElementsByName("headphones");
                         const headsets = document.getElementsByName("headsets");
                         const earphones = document.getElementsByName("earphones");
@@ -319,16 +321,24 @@ function Filter() {
                         const products = [headphones, headsets, earphones, microphones, speakers, brands];
                         let filters = "";
 
+                        //loops through filter fields
                         for (let i = 0; i < products.length; i++) {
+                            
+                            //loops through filter inputs
                             for (let j = 0; j < products[i].length; j++) {
+
+                                //if a filter input was selected, concatenate
                                 if (products[i][j].checked) {
                                     filters = filters + products[i][j].value + "-";
                                 }
+
                             }
+
                         }
 
                         filters = filters.slice(0, filters.lastIndexOf("-"));
 
+                        //goes to filter results page with filter inputs
                         navigate(`/filterresults/${filters}`, { state: { filters } });
                     }}>Apply</Button>
                 </div>

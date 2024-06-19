@@ -4,15 +4,18 @@ import Filter from './Filter.jsx';
 import GetProducts from './../utils/GetProducts.jsx';
 
 function FilterResults() {
+  //declarations
   const [products, setProducts] = useState([]);
   const location = useLocation();
   const params = useParams();
   let djangoApiConnection;
 
   if (location.state !== null) {
+    //if filter inputs were entered, then selected audio products will be fetched
     djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + "filter/" + location.state.filters;
   }
   else {
+    //filter inputs were entered to web browser's search bar and selected audio products will be fetched
     djangoApiConnection = import.meta.env.VITE_DJANGO_API_CONNECTION + "filter/" + params.filter;
   }
 
@@ -26,6 +29,7 @@ function FilterResults() {
       
       <div className="audio-product-format">
         {
+          //displays audio product cards dynamically
           products.map((product) => 
             <div className="audio-product-card" key={product.product_id}>
               <Link to={product.product_name}>

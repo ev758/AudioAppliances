@@ -8,6 +8,7 @@ function Microphones() {
       <div>
         <h1><Link to="/">Audio Appliances</Link></h1>
 
+        {/* links to headphones, headsets, earphones, microphones, and speakers pages */}
         <NavigationBar/>
 
         <SearchBar/>
